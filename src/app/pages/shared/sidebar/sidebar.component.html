@@ -1,0 +1,69 @@
+<html lang="en" id="html">
+<div class="sidebar" id="sidebar" style="margin-top: 2.3em;">
+    <div class="sidebar-wrapper" >
+        <div class="logo-rc" >
+
+
+            <div class="navbar-bar" id="content-buttons" >
+
+                <button id="boton-sidebar"><img src="assets/img/book.png"  type="button" style="width: 30px; height: 30px; color: white;"  /></button>
+                <span style="font-family: 'Roboto';">Gestión Académica</span>
+                <!--El boton que aparecera si es que nuestro dashboard hace scroll-->
+                <div class="navbar-bar_fixed" id="content-button_fixed">
+                    <button id="boton-sidebar_fixed"><img src="assets/img/talleres.png" type="button" style="width: 30px; height: 30px;" /></button>
+                </div>
+
+            </div>
+        </div>
+        <div class="nav">
+            <ul>
+
+                <li>
+                    <a [routerLink]="[ '/cursos/tablero_cursos' ]" routerLinkActive="active">
+
+                        <i class="fas fa-sort-alpha-down"></i>
+                        <span> Paralelo</span>
+                    </a>
+                </li>
+                <li>
+                    <a >
+
+                        <i class="fas fa-calendar-week"></i>
+
+                        <span> Cursos</span>
+                    </a>
+                </li>
+                <li>
+                    <a [routerLink]="[ '/cursos/horarios' ]" routerLinkActive="active" >
+                      
+                        <i class="fas fa-clock"></i>
+                        <span> Horario</span>
+                    </a>
+                </li>
+
+         
+                <li>
+                    <a [routerLink]="[ '/cursos/docentes' ]" routerLinkActive="active" >
+                        <i class="fas fa-user-graduate"></i>
+                        <span> DOCENTES</span>
+                    </a>
+                </li>
+                <li>
+                    <!-- <a >
+                   
+                        <i class="fab fa-readme"></i>
+                        <span> Politicas</span>
+                    </a> -->
+                     <!-- <a [routerLink]="[ '/talleres/ver_politicas' ]" routerLinkActive="active"> -->
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+</html>

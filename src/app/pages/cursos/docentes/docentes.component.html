@@ -1,0 +1,71 @@
+<app-sidebar></app-sidebar>
+
+<div class="main-panel" >
+    <button class="btn" id="boton-sidebar_left" style="float: right; margin-right: 1em; margin-top: 7em;"><i class="fas fa-angle-double-left" ></i></button>
+    <div class="content" id="main">
+
+
+        <p class="p1" style="margin-top: 1em; font-family: 'Roboto';" >Administración  Docentes</p>
+
+        <div class="container ">
+            <div class="row ">
+      
+              <div class="input-group justify-content-center mb-4" style="align-items: center;">
+                <div id="search-autocomplete" class="form-outline">
+                  <input type="search" id="form1" class="form-control"   style="border-bottom: 1px solid silver; height: 2.7em;  " placeholder=""/>
+                  <label class="form-label" for="form1" style="font-family: 'Roboto';">Buscar docente</label>
+                </div>
+                <button type="submit" class="btn" style="background-color: #03a9f4; width: 5.5em; height: 3.5em;" >
+                  <i class="fas fa-search" style="color: white;"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+
+
+        <div class="table-responsive table-striped table-bordered ">
+
+            <table class="table  ">
+                <thead class="thead">
+                    <tr class="text-center" >
+                        <th scope="col"><i class="fas fa-hashtag"></i> ID</th>
+                        <th scope="col"><i class="fas fa-signature"></i> Nombre </th> 
+                        <th scope="col"><i class="fas fa-clock"></i> Hora de Fin </th> 
+                        <th scope="col"><i class="fas fa-tools"></i> Acciones</th>
+
+                    </tr>
+                </thead>
+                <tbody class="tbody">
+                  <!-- <tr class="text-center" *ngFor="let el of paralelo">
+                    <td> {{el.id}}</td>
+                    <td> {{el.numeracion}}</td>
+                    <td> {{el.letra}}</td>
+                    <td>
+                      <div class="">
+                        <button class="btn btn-success"><i class="fas fa-plus"></i></button>
+                        <button class="btn btn-warning"><i class="fas fa-pencil-alt"></i></button>
+                        <button class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+                      </div>
+
+                    </td>
+                  </tr> -->
+
+                </tbody>
+                
+            </table>
+            <div class="d-flex  p-2 divSelect">
+                <!-- <ngb-pagination [collectionSize]="collectionSize" [(page)]="page" [pageSize]="pageSize" (pageChange)="refreshParalelo()">
+                </ngb-pagination> -->
+                  <!--               
+                <select class="form-select" style="width: auto" [(ngModel)]="pageSize" (ngModelChange)="refreshParalelo()">
+                  <option [ngValue]="2">2 items per page</option>
+                  <option [ngValue]="4">4 items per page</option>
+                  <option [ngValue]="6">6 items per page</option>
+                </select> -->
+              </div>
+        </div>
+    </div>
+
+</div>
+

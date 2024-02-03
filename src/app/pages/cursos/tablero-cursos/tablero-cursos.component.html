@@ -1,0 +1,104 @@
+<app-sidebar></app-sidebar>
+
+<div class="main-panel" >
+    <button class="btn" id="boton-sidebar_left" style="float: right; margin-right: 1em; margin-top: 7em;"><i class="fas fa-angle-double-left" ></i></button>
+    <div class="content" id="main">
+
+
+        <p class="p1" style="margin-top: 1em; font-family: 'Roboto';" >Administración Paralelos</p>
+
+        <div class="container ">
+            <div class="row ">
+      
+              <div class="input-group justify-content-center mb-4" style="align-items: center;">
+                <div id="search-autocomplete" class="form-outline">
+                  <input type="search" id="form1" class="form-control"   style="border-bottom: 1px solid silver; height: 2.7em;  " placeholder=""/>
+                  <label class="form-label" for="form1" style="font-family: 'Roboto';">Buscar paralelo</label>
+                </div>
+                <button type="submit" class="btn" style="background-color: #03a9f4; " >
+                  <i class="fas fa-search" style="color: white;"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+
+
+        <div class="table-responsive table-striped table-bordered ">
+
+            <table class="table  ">
+                <thead class="thead">
+                    <tr class="text-center" >
+                        <th scope="col"><i class="fas fa-hashtag"></i> ID</th>
+                        <th scope="col"><i class="fas fa-list-ol"></i> Numeración </th> 
+                        <th scope="col"><i class="fas fa-book-open"></i> Letra </th> 
+                        <th scope="col"><i class="fas fa-tools"></i> Acciones</th>
+
+                    </tr>
+                </thead>
+                <tbody class="tbody">
+                  <tr class="text-center" *ngFor="let el of paralelo">
+                    <td> {{el.id}}</td>
+                    <td> {{el.numeracion}}</td>
+                    <td> {{el.letra}}</td>
+                    <td>
+                      <div class="">
+                        <button class="btn btn-success"(click)="abrirModal(modalCrear)" ><i class="fas fa-plus"></i></button>
+                        <button class="btn btn-warning"><i class="fas fa-pencil-alt"></i></button>
+                        <button class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+                      </div>
+
+                    </td>
+                  </tr>
+
+                </tbody>
+                
+            </table>
+            <div class="d-flex  p-2 divSelect">
+                <ngb-pagination [collectionSize]="collectionSize" [(page)]="page" [pageSize]="pageSize" (pageChange)="refreshParalelo()">
+                </ngb-pagination>
+                  <!--               
+                <select class="form-select" style="width: auto" [(ngModel)]="pageSize" (ngModelChange)="refreshParalelo()">
+                  <option [ngValue]="2">2 items per page</option>
+                  <option [ngValue]="4">4 items per page</option>
+                  <option [ngValue]="6">6 items per page</option>
+                </select> -->
+              </div>
+        </div>
+    </div>
+
+</div>
+
+<ng-template #modalCrear let-modal>
+  <div class="modal-header" style="background-color: rgb(156, 138, 143); color: white;">
+    <h4 class="modal-title">Crear Paralelo</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+  </div>
+  <div class="modal-body">
+    <div class="row">
+    <div class="col-xl-6">
+      <strong>Numeración:</strong> <input class="form-control" >
+    </div>
+    <div class="col-xl-6">
+      <strong>Nombre:</strong> <input class="form-control" >
+    </div>
+  </div>
+   
+  <div class="col-xl-12 mt-4">
+    <strong> Asignar Estudiantes  </strong>
+    <br>
+    <label class="btn btn-outline-success "  >
+      <i class="far fa-file-excel"></i> Cargar Excel <input   type="file" value="evidencia1"  style="display: none; width: 14em;"  name="evidencia1" id="evidencia1">
+   </label>
+  </div>
+
+    
+     <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-4 mt-2 ">
+  
+     
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+  </div>
+  </div>
+</ng-template>

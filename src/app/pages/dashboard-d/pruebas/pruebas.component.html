@@ -1,0 +1,215 @@
+<app-navbar></app-navbar>
+
+<div class="box m-1">
+    
+    <h1  style="padding-top: 3em; margin-bottom: 2em;" >ADMINISTRACION TEMÁTICAS</h1>
+
+<div class="container">
+    <div class="row mb-3">
+        <div class="col">
+            <button class="btn" style="background-color: rgb(71, 82, 92); color: white;" (click)="abrirModal(modalCrearTema)" >
+                <i class="fas fa-plus"></i> Crear Tema
+            </button>
+        </div>
+        <div class="col">
+            <div class="input-group justify-content-center" style="align-items: center;">
+                <div id="search-autocomplete" class="form-outline">
+                  <input
+            
+                  type="search" id="form1" class="form-control"   style="border-bottom: 1px solid silver; height: 2.6em" placeholder="Ingrese la placa"/>
+                  <label class="form-label" for="form1">Buscar temática</label>
+                </div>
+                <button
+                
+                type="submit" class="btn" style="background-color: rgb(71, 82, 92);  height: 3.5em;" >
+                  <i class="fas fa-search" style="color: white;"></i>
+                </button>
+              </div>
+        </div>
+    </div>
+</div>
+    <div class="container">
+
+    <table class="table " style="opacity: 0.90;     box-shadow: 1px 2px 8px 0px #888686;"  >
+        <thead class="thead"  style="background-color: rgb(71, 82, 92); color: white; ">
+          <tr>
+            <th scope="col"><i class="fas fa-hashtag"></i> ID</th>
+            <th scope="col"><i class="fas fa-hashtag"></i> Asignatura</th>
+
+            <th scope="col"><i class="fas fa-signature"></i> Nombre</th>
+            <th scope="col"> <i class="fas fa-list"></i> Subtemas</th>
+            <th scope="col"> <i class="fas fa-tools"></i> Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Física</td>
+            <td>Leyes de la termodinámica</td>
+
+            <td style="text-align: center;" >
+              <li>Primera Ley </li>
+              <li>Segunda Ley </li>
+              <li>Tercera Ley</li>
+            </td>
+
+            <td>
+                <div class="button-group">
+                  <button class="btn btn-sm btn-warning" style="font-family: Arial, Helvetica, sans-serif;"><i class="fas fa-pencil-alt"> </i></button>
+                  <button class="btn btn-sm btn-danger " style="font-family: 'Roboto';"><i class="fas fa-trash-alt">  </i></button>
+                    <!-- <button></button> -->
+
+                </div>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Matemática</td>
+            <td>Resolución de Ecuaciones</td>
+            <td style="text-align: center;" >
+              <li>Fórmula General </li>
+              <li>Método Gauss </li>
+              <li>Método Gauss Jordan</li>
+            </td>
+            <td>
+                <div class="button-group">
+                  <button class="btn btn-sm btn-warning" style="font-family: Arial, Helvetica, sans-serif;"><i class="fas fa-pencil-alt"> </i></button>
+                  <button class="btn btn-sm btn-danger " style="font-family: 'Roboto';"><i class="fas fa-trash-alt">  </i></button>
+                    <!-- <button></button> -->
+
+                </div>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Estadística</td>
+            <td>Estadísitca Descriptiva</td>
+            <td style="text-align: center;" >
+              <li>Moda,media y mediana </li>
+              <li>Estudio de variables continuas </li>
+              <li>Distribuciones Bidimensionales</li>
+            </td>
+            <td>
+                <div class="button-group">
+                  <button class="btn btn-sm btn-warning" style="font-family: Arial, Helvetica, sans-serif;"><i class="fas fa-pencil-alt"> </i></button>
+                  <button class="btn btn-sm btn-danger " style="font-family: 'Roboto';"><i class="fas fa-trash-alt">  </i></button>
+                    <!-- <button></button> -->
+
+                </div>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">4</th>
+            <td>Estadística II</td>
+            <td>Probabilidad</td>
+            <td style="text-align: center;" >
+              <li>Sucesos compatibles </li>
+              <li>Sucesos incompatibles </li>
+              <li>Cálculo de Probabilidad</li>
+            </td>
+
+            <td>
+                <div class="button-group">
+                    <button class="btn btn-sm btn-warning" style="font-family: Arial, Helvetica, sans-serif;"><i class="fas fa-pencil-alt"> </i></button>
+                    <button class="btn btn-sm btn-danger " style="font-family: 'Roboto';"><i class="fas fa-trash-alt">  </i></button>
+                    <!-- <button></button> -->
+
+                </div>
+            </td>
+          </tr>
+          <!-- <tr>
+            <th scope="row">5</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>
+                <div class="button-group">
+                    <button class="btn btn-sm btn-warning" style="font-family: Arial, Helvetica, sans-serif;"><i class="fas fa-pencil-alt"> Editar </i></button>
+                    <button class="btn btn-sm btn-danger "><i class="fas fa-trash-alt"> Eliminar </i></button>
+
+                </div>
+            </td>
+          </tr> -->
+        </tbody>
+      </table>
+      
+    </div>
+
+
+</div>
+
+
+<ng-template #modalCrearTema let-modal>
+  <div class="modal-header" id="modalCabecera">
+    <h4 class="modal-title"  >Crear Temática</h4>
+    <!-- <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button> -->
+  </div>
+  <div class="modal-body">
+    <div class="row divSelect">
+        <div class="col-xl-8 col-lg-8">
+          <!-- <div class="col"><p style="font-weight: bold; " >Seleccionar Materia:</p></div>
+          <select class="form-control" style="border-radius: 1%;">
+
+            <option>Elegir...</option>
+            <option>Matemática</option>
+            <option>Física</option>
+            <option>Estadística</option>
+
+          </select>           -->
+          <div class="form-group">
+            <label for="username" id="tituloF">Seleccionar materia <i class="fas fa-signature"></i></label>
+            <select class="form-control form-icon-trailing entrada1" >
+      
+              <option>Elegir...</option>
+                  <option>Matemática</option>
+                  <option>Física</option>
+                  <option>Estadística</option>
+      
+            </select>
+        </div>
+        </div>
+    </div>
+
+    <div class="row divSelect mt-3">
+        <div class="col-xl-8 col-lg-8">
+          <div class="form-group">
+            <label for="username" id="tituloF">Nombre <i class="fas fa-signature"></i></label>
+              <input  class="form-control form-icon-trailing"  placeholder="Ingrese nombre" >
+        </div>
+          
+        </div>
+    </div>
+    <div class="container mt-2 divSelect" style="width: 80%;">
+
+<table class="table">
+  <thead class="thead-light">
+    <tr>
+      <th colspan="4" scope="col" class="text-center font-weigth-bold">Agregar Subtemas</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+     
+      
+      <td colspan="3" class="text-center">
+        <input type="text" class="form-control" placeholder="Nombre subtema">
+      </td>
+      <td colspan="1" style="float: right;">
+        <button class="btn btn-info">
+          <i class="fas fa-plus"></i>
+    
+        </button>
+      </td>
+    </tr>
+
+  </tbody>
+</table>
+
+    </div>
+    
+  
+  </div>
+  <div class="modal-footer divSelect mb-4">
+    <button type="button" class="btn btn-light" (click)="guardarTema()" > <i class="fas fa-save"></i> Guardar</button>
+    <button type="button" class="btn " (click)="modal.close('Close click')" id="modalCabecera"><i class="fas fa-times"></i> Cerrar</button>
+  </div>
+</ng-template>

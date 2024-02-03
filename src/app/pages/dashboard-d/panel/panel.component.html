@@ -1,0 +1,415 @@
+<app-navbar></app-navbar>
+<div class="box m-1">
+    
+    <h1 style="font-family: 'Pragati Narrow', sans-serif; padding-top: 1em; font-size:2.5em;" class="pb-4"  >Asignaturas</h1>
+
+      <p>
+        <button type="button" class="btn btn-outline-dark"  style="width: 12em; opacity: 0.50;"  (click)="collapse1.toggle()" [attr.aria-expanded]="!isCollapsed1"
+          aria-controls="collapseExample">
+          Matemáticas
+        </button>
+      </p>
+  <div #collapse1="ngbCollapse" [(ngbCollapse)]="isCollapsed1">
+   <div class=" container mt-3 " >
+     <div class="row ">
+      <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12  " >
+            <div class="card text-white  mb-3" id="boxParalelos" style=" background-color: #9E9E9E;  ">
+                <div class="card-header">08:00 - 09:00</div>
+                <div class="card-body" type="button" (click)="abrirModal(modalCrearGrupos)" >
+                  <h5 class="card-title">Primero Bachillerato "A"</h5>
+                  <p class="card-text" style="color: black;">
+                    Clases Lunes, Jueves y Viernes en franjas de 1 hora </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 divSelect " >
+              <div class="card text-white  mb-3"id="boxParalelos" style=" background-color: rgb(71, 82, 92); color: white; ">
+                <div class="card-header"> 10:00 - 11:00 </div>
+                <div class="card-body" type="button" (click)="abrirModal(modalCrearGrupos)">
+                  <h5 class="card-title">Segundo Bachillerato "F"</h5>
+                  <p class="card-text" style="color: white;">
+                    Clases Martes , Miercoles y Viernes en franjas de 1 hora 
+                  </p>
+          
+                </div>
+             </div>
+          </div>
+          <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 divSelect " >
+            <div class="card text-white mb-3" id="boxParalelos" style="background-color: #BCAAA4;">
+              <div class="card-header">12:00 - 13:00</div>
+              <div class="card-body" type="button" (click)="abrirModal(modalCrearGrupos)">
+                <h5 class="card-title">Tercero Bachillerato "D"</h5>
+                <!-- <p class="card-text" style="color: black;">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                <p class="card-text   " style="color: black;">
+                  Clases Lunes , Miercoles y Jueves en franjas de 1 hora 
+                 
+                </p>
+              </div>
+            </div>
+            </div>
+      </div>
+    </div>
+ </div>
+      <p>
+        <button type="button" class="btn btn-outline-primary" style="width: 12em;"  (click)="collapse.toggle()" [attr.aria-expanded]="!isCollapsed1"
+          aria-controls="collapseExample">
+          Física
+        </button>
+      </p>
+<div #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed">
+   <div class=" container mt-3" >
+     <div class="row">
+      <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 divSelect " >
+        <div class="card text-white mb-3"  id="boxParalelos" style=" background-color: #00B0FF;">
+          <div class="card-header">10:00 - 11:00</div>
+          <div class="card-body" type="button" (click)="abrirModal(modalCrearGrupos)">
+            <h5 class="card-title">Tercero Bachillerato "H"</h5>
+            <p class="card-text" id="textoCard">           
+              Clases Lunes , Jueves y Viernes en franjas de 1 hora 
+           </p>
+          </div>
+        </div>
+        </div>
+        <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 divSelect " >
+              <div class="card text-white  mb-3" id="boxParalelos"  style="background-color: #B3E5FC;">
+                <div class="card-header text-black" > 09:00 - 10:00 </div>
+                <div class="card-body" type="button" (click)="abrirModal(modalCrearGrupos)">
+                  <h5 class="card-title text-black" >Primero Bachillerato "C"</h5>
+                  <p class="card-text" style="color: black;">
+                    Clases Martes , Miercoles y Viernes en franjas de 1 hora 
+             </p>
+                </div>
+             </div>
+          </div>
+          <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 divSelect " >
+            <div class="card text-white mb-3" id="boxParalelos"  style="background-color: #2196F3;">
+              <div class="card-header">11:00 - 12:00</div>
+              <div class="card-body" type="button" (click)="abrirModal(modalCrearGrupos)">
+                <h5 class="card-title">Segundo Bachillerato "F"</h5>
+                <p class="card-text" style="color: white;">
+                  Clases Lunes , Miercoles y Jueves en franjas de 1 hora </p>
+              </div>
+            </div>
+            </div>
+      </div>
+    </div>
+ </div>
+
+ <p>
+  <button type="button" class="btn btn-outline-success" style="width: 12em;"  (click)="collapse2.toggle()" [attr.aria-expanded]="!isCollapsed2"
+    aria-controls="collapseExample">
+    Estadística
+  </button>
+</p>
+
+
+<div #collapse2="ngbCollapse" [(ngbCollapse)]="isCollapsed2">
+  <div class=" container mt-3" >
+    <div class="row">
+     <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 divSelect " >
+       <div class="card text-white mb-3" id="boxParalelos"   style=" background-color: #66BB6A;">
+         <div class="card-header">11h00 - 12:00</div>
+         <div class="card-body" type="button" (click)="abrirModal(modalCrearGrupos)">
+           <h5 class="card-title">Segundo Bachillerato "J"</h5>
+           <p class="card-text" style="color: white;">
+            Clases Lunes , Miercoles y Jueves en franjas de 1 hora </p>
+         </div>
+       </div>
+       </div>
+       <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 divSelect " >
+             <div class="card text-white  mb-3"  id="boxParalelos"  style="background-color: #00E676;">
+               <div class="card-header">08:00 - 09:00</div>
+               <div class="card-body" type="button" (click)="abrirModal(modalCrearGrupos)">
+                 <h5 class="card-title">Tercero Bachillerato "E"</h5>
+                 <p class="card-text" style="color: white;">
+                  Clases Lunes , Miercoles y Jueves en franjas de 1 hora </p>
+               </div>
+            </div>
+         </div>
+         <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 divSelect " >
+           <div class="card text-white mb-3"  id="boxParalelos" style="background-color: #26A69A;">
+             <div class="card-header">12:00 - 13:00</div>
+             <div class="card-body" type="button" (click)="abrirModal(modalCrearGrupos)">
+               <h5 class="card-title">Primero Bachillerato "K"</h5>
+               <p class="card-text" style="color: white;">
+                Clases Lunes , Miercoles y Jueves en franjas de 1 hora </p>
+             </div>
+           </div>
+           </div>
+     </div>
+   </div>
+</div>
+
+   
+</div>
+
+
+<ng-template #modalCrearGrupos let-modal>
+  <div class="modal-header" id="modalCabecera">
+    <h4 class="modal-title"  ></h4>
+  </div>
+
+  <h4 class="text-center font-weigth-bold mt-3">Asignar Trabajo</h4>
+  <div class="modal-body">
+    <div class="row divSelect">
+        <div class="col-xl-8 col-lg-8">
+  
+          <div class="form-group">
+            <label for="username" id="tituloF" class="text-center">Seleccionar Técnica <i class="fas fa-signature"></i></label>
+            <div class="button-group">
+
+              <button class="btn btn-small btn-primary btn-block"(click)="abrirModal2(modalDesignarGrupos)">Manual</button>
+              <button class="btn btn-small btn-info  btn-block" (click)="abrirModal2(modalTecnicaRandom)" >Aleatorio</button>
+              <button class="btn btn-small btn-secondary  btn-block">Prueba diagnóstico</button>
+             
+
+            </div>
+
+        </div>
+        </div>
+    </div>
+  
+  </div>
+  <div class="modal-footer divSelect mb-4">
+
+    <div class="col-xl-8 col-lg-8">
+    <button type="button" class="btn btn-small btn-block" (click)="modal.close('Close click')" id="modalCabecera"><i class="fas fa-times"></i> Cerrar</button>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #modalDesignarGrupos let-modal>
+  <div class="modal-header" id="modalCabecera">
+    <h4 class="modal-title"  ></h4>
+  </div>
+
+  <h4 class="text-center font-weigth-bold mt-3">Técnica Manual</h4>
+  <div class="modal-body">
+    <div class="row divSelect">
+        <div class="col-xl-8 col-lg-8">
+  
+          <div class="form-group">
+            <label for="username" id="tituloF" class="text-center">Seleccionar Temática </label>
+            <!-- <div class="button-group">
+
+              <button class="btn btn-small btn-primary btn-block">Manual</button>
+              <button class="btn btn-small btn-info  btn-block">Aleatorio</button>
+              <button class="btn btn-small btn-secondary  btn-block">Prueba diagnóstico</button>
+             
+
+            </div> -->
+            <form action="">
+            <select class="custom-select" onchange="myFunction()" >
+              <option>Seleccionar Tema</option>
+              <option  value="1" id="optionValue" >Leyes de Newton</option>
+              <option>Moviento Rectilineo Uniforme</option>
+              <option>Moviento Rectilineo Uniformemente variado</option>
+            </select>
+          </form>
+
+        </div>
+        </div>
+
+        <div >
+          <label for="username" id="tituloF" class="text-center">SubTemas </label>
+
+          <li>Ley de la inercia</li>
+          <li>Ley fundamental de la dinámica</li>
+          <li>Ley de acción y reacción</li>
+
+
+        </div>
+
+
+    </div>
+  
+  </div>
+  <div class="modal-footer divSelect mb-4">
+
+    <div class="col-xl-8 col-lg-8">
+    <button type="button" class="btn btn-small btn-block" (click)="modal.close('Close click')" id="modalCabecera"><i class="fas fa-times"></i> Cerrar</button>
+    </div>
+  </div>
+</ng-template>
+<ng-template #modalDesignarGrupos let-modal>
+  <div class="modal-header" id="modalCabecera">
+    <h4 class="modal-title"  ></h4>
+  </div>
+
+  <h4 class="text-center font-weigth-bold mt-3">Técnica Manual</h4>
+  <div class="modal-body">
+    <div class="row divSelect">
+        <div class="col-xl-8 col-lg-8">
+  
+          <div class="form-group">
+            <label for="username" id="tituloF" class="text-center">Seleccionar Temática </label>
+            <!-- <div class="button-group">
+
+              <button class="btn btn-small btn-primary btn-block">Manual</button>
+              <button class="btn btn-small btn-info  btn-block">Aleatorio</button>
+              <button class="btn btn-small btn-secondary  btn-block">Prueba diagnóstico</button>
+             
+
+            </div> -->
+            <form action="">
+            <select class="custom-select" onchange="myFunction()" >
+              <option>Seleccionar Tema</option>
+              <option  value="1" id="optionValue" >Leyes de Newton</option>
+              <option>Moviento Rectilineo Uniforme</option>
+              <option>Moviento Rectilineo Uniformemente variado</option>
+            </select>
+          </form>
+
+        </div>
+        </div>
+
+        <div >
+          <label for="username" id="tituloF" class="text-center">SubTemas </label>
+
+          <li>Ley de la inercia</li>
+          <li>Ley fundamental de la dinámica</li>
+          <li>Ley de acción y reacción</li>
+
+
+        </div>
+
+
+    </div>
+  
+  </div>
+  <div class="modal-footer divSelect mb-4">
+
+    <div class="col-xl-8 col-lg-8">
+    <button type="button" class="btn btn-small btn-block" (click)="modal.close('Close click')" id="modalCabecera"><i class="fas fa-times"></i> Cerrar</button>
+    </div>
+  </div>
+</ng-template>
+<ng-template #modalDesignarGrupos let-modal>
+  <div class="modal-header" id="modalCabecera">
+    <h4 class="modal-title"  ></h4>
+  </div>
+
+  <h4 class="text-center font-weigth-bold mt-3">Técnica Manual</h4>
+  <div class="modal-body">
+    <div class="row divSelect">
+        <div class="col-xl-8 col-lg-8">
+  
+          <div class="form-group">
+            <label for="username" id="tituloF" class="text-center">Seleccionar Temática </label>
+            <!-- <div class="button-group">
+
+              <button class="btn btn-small btn-primary btn-block">Manual</button>
+              <button class="btn btn-small btn-info  btn-block">Aleatorio</button>
+              <button class="btn btn-small btn-secondary  btn-block">Prueba diagnóstico</button>
+             
+
+            </div> -->
+            <form action="">
+            <select class="custom-select" onchange="myFunction()" >
+              <option>Seleccionar Tema</option>
+              <option  value="1" id="optionValue" >Leyes de Newton</option>
+              <option>Moviento Rectilineo Uniforme</option>
+              <option>Moviento Rectilineo Uniformemente variado</option>
+            </select>
+          </form>
+
+        </div>
+        </div>
+
+        <div >
+          <label for="username" id="tituloF" class="text-center">SubTemas </label>
+
+          <li>Ley de la inercia</li>
+          <li>Ley fundamental de la dinámica</li>
+          <li>Ley de acción y reacción</li>
+
+
+        </div>
+
+
+    </div>
+  
+  </div>
+  <div class="modal-footer divSelect mb-4">
+
+    <div class="col-xl-8 col-lg-8">
+    <button type="button" class="btn btn-small btn-block" (click)="modal.close('Close click')" id="modalCabecera"><i class="fas fa-times"></i> Cerrar</button>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #modalTecnicaRandom let-modal>
+  <div class="modal-header" id="modalCabecera">
+    <h4 class="modal-title"  ></h4>
+  </div>
+
+  <h4 class="text-center font-weigth-bold mt-3">Técnica Aleatoria</h4>
+  <div class="modal-body">
+    <div class="row divSelect">
+        <div class="col-xl-8 col-lg-8">
+  
+          <div class="form-group">
+            <label for="username" id="tituloF" class="text-center">Seleccionar Temática </label>
+            <!-- <div class="button-group">
+
+              <button class="btn btn-small btn-primary btn-block">Manual</button>
+              <button class="btn btn-small btn-info  btn-block">Aleatorio</button>
+              <button class="btn btn-small btn-secondary  btn-block">Prueba diagnóstico</button>
+             
+
+            </div> -->
+            <form action="">
+            <select class="custom-select" onchange="myFunction()" style="border-bottom: 1px solid #39C0ED;" >
+              <option>Seleccionar Tema</option>
+              <option  value="1" id="optionValue" >Leyes de Newton</option>
+              <option>Moviento Rectilineo Uniforme</option>
+              <option>Moviento Rectilineo Uniformemente variado</option>
+            </select>
+          </form>
+
+        </div>
+        </div>
+
+        <div >
+          <label for="username" id="tituloF" class="text-center">Organizción de grupos </label>
+
+          <div class="row divSelect">
+            <div class="col-xl-4 text-center text-font-weight" >
+              <label for="username"  class="text-center"> <i class="fas fa-users"></i> Número de grupos  </label>
+
+             
+              <input formControlName="c" type="number" class="form-control cantidad" id="cantidad" style="height: 2.5em;"  min="1" oninput="this.value = 
+              !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null" value="" placeholder="1" style="border-bottom: 1px solid #39C0ED;">
+
+
+            </div>
+
+            <div class="col-xl-4 text-center text-font-weight">
+              <label for="username" class="text-center"> <i class="fas fa-male"></i> Número de Integrantes</label>
+
+              <input formControlName="c" type="number" class="form-control cantidad" id="cantidad" style="height: 2.5em;"  min="1" oninput="this.value = 
+              !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : null" value="" placeholder="1" style="border-bottom: 1px solid #39C0ED;">
+
+
+            </div>
+          </div>
+
+          <!-- <li>Ley de la inercia</li>
+          <li>Ley fundamental de la dinámica</li>
+          <li>Ley de acción y reacción</li> -->
+
+
+        </div>
+
+
+    </div>
+  
+  </div>
+  <div class="modal-footer divSelect mb-4">
+
+    <div class="col-xl-8 col-lg-8">
+    <button type="button" class="btn btn-small btn-info btn-block" (click)="generarGrupos()" id=""><i class="fas fa-sync-alt"></i> Generar</button>
+    <button type="button" class="btn btn-small btn-block" (click)="modal.close('Close click')" id="modalCabecera"><i class="fas fa-times"></i> Cancelar</button>
+    </div>
+  </div>
+</ng-template>
